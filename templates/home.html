@@ -1,0 +1,50 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>snackss</title>
+    <link rel="stylesheet"  href="{%  static  'style.css'  %}">
+    <style>main{
+
+        font-size: x-large;
+        margin-left: 11pc;
+        transform: rotate(-8.5deg);
+    }
+    body{
+        background-image: url(https://pbs.twimg.com/media/DBwmSRGUIAAdxWD.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    h1{
+        color: white;
+        margin-left: 85pc;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-style: italic;
+        font-size: 25px;
+    }
+    
+    </style>
+</head>
+<body>
+    <h1>Hello There</h1>
+    <main>
+        
+        <h2>List Of Food</h2>
+        <ul>
+            {% for snack in object_list %}
+            <li><a href="{% url 'snack_details' snack.pk%}">{{ snack.name }}</a></li>
+            <!-- <li>
+                <h3>Name: {{ snack.name }}</h3>
+                <h3>Rank: {{ snack.rank }}</h3>
+                <h3>Rank: {{ snack.eater }}</h3>
+            </li> -->
+
+
+            {% endfor %}
+        </ul>
+    </main>
+</body>
+</html>

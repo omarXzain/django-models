@@ -1,0 +1,26 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>snackss</title>
+    <link rel="stylesheet"  href="{% static 'style.css' %}">
+    <style>main{
+        background-color: cyan;
+        font-size: x-large;
+    }
+    
+    h1{
+        text-align: center;
+    }</style>
+</head>
+<body>
+    <main>
+        <h2>Your Food</h2>
+        <h3>{{ snack.name }}</h3>
+        <h3>{{ snack.rank }}</h3>
+    </main>
+</body>
+</html>
